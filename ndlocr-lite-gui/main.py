@@ -1749,6 +1749,10 @@ def main(page: ft.Page):
             pdf_resolution_textfield.disabled = not chkbx_pdf.value
             pdf_resolution_textfield.update()
 
+        def change_visualizestatus(e):
+            config_obj['visualize'] = chkbx_visualize.value
+            save_config()
+
         preview_image = ft.Image(src=DEFAULT_IMAGE_SRC, width=400, height=300, gapless_playback=True)
         preview_text = ft.Markdown(
             value='',
@@ -1775,7 +1779,7 @@ def main(page: ft.Page):
         selected_output_path = ft.Text(config_obj['selected_output_path'], selectable=True)
         current_visualizeimgname = ft.Text(selectable=True)
         progressmessage = ft.Text(width=400, selectable=True)
-        chkbx_visualize = ft.Checkbox(label=TRANSLATIONS['main_visualize_label'][config_obj['langcode']], value=True, key='visualize')
+        chkbx_visualize = ft.Checkbox(label=TRANSLATIONS['main_visualize_label'][config_obj['langcode']], value=config_obj.get('visualize', True), on_change=change_visualizestatus, key='visualize')
         chkbx_json = ft.Checkbox(label='JSON形式', value=config_obj['json'], key='output_json')
         chkbx_txt = ft.Checkbox(label='TXT形式', value=config_obj['txt'], key='output_txt')
         chkbx_markdown = ft.Checkbox(label='Markdown形式（.md）', value=config_obj.get('markdown', False), key='output_markdown')
