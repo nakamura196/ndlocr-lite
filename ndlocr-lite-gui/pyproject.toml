@@ -3,7 +3,7 @@ name = "ndlocr-lite-gui"
 version = "1.0.0"
 description = ""
 readme = "README.md"
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.11,<3.14"
 authors = [
     { name = "National_Diet_Library", email = "lab@ndl.go.jp" }
 ]
