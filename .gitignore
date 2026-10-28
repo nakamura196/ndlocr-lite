@@ -1,6 +1,7 @@
 **/__pycache__/**
 /ocrenv/
 /build/
+/src/ndlocr_lite.egg-info/
 /__pycache__/
 /ndlocr-lite-gui/build/
 /ndlocr-lite-gui/src/
