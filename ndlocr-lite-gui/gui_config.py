@@ -13,6 +13,7 @@ GUI_DEFAULT_CONFIG = {
     'text_daisy': False,
     'result_markdown_display': False,
     'selected_output_path': None,
+    'visualize': True,
 }
 
 
